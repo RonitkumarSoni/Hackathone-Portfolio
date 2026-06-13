@@ -13,43 +13,60 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ronit Portfolio',
+  title: 'Ronit Soni | Full Stack MERN Developer & AI Enthusiast',
   description:
-    'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+    'Full Stack Developer specializing in MERN, Next.js, and AI-powered web applications. Explore 13+ live projects, 18 certifications, and an interactive AI chat assistant. Open to collaboration and opportunities.',
   keywords: [
-    'Ronit',
-    'Portfolio',
-    'Developer',
-    'AI',
-    'Interactive',
-    'Memoji',
-    'Web Development',
-    'Full Stack',
-    'Next.js',
-    'React',
+    'Ronit Soni',
+    'Full Stack Developer',
+    'MERN Stack',
+    'Next.js Developer',
+    'React Developer',
+    'AI Portfolio',
+    'Web Developer India',
+    'Node.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'AWS Certified',
+    'Frontend Developer',
+    'Backend Developer',
+    'Gemini AI',
+    'Interactive Portfolio',
   ],
   authors: [
     {
       name: 'Ronit Soni',
-      url: 'https://github.com/RonitkumarSoni',
+      url: 'https://ronitsoni-dev.vercel.app',
     },
   ],
-  creator: 'Ronit',
+  creator: 'Ronit Soni',
+  metadataBase: new URL('https://ronitsoni-dev.vercel.app'),
+  verification: {
+    google: '5aa7024bc3a1fec1',
+  },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://github.com/RonitkumarSoni',
-    title: 'Ronit Soni Portfolio',
+    locale: 'en_IN',
+    url: 'https://ronitsoni-dev.vercel.app',
+    title: 'Ronit Soni | Full Stack MERN Developer',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
-    siteName: 'Ronit Soni Portfolio',
+      'Full Stack Developer with 13+ projects, 18 certifications, and an AI-powered interactive portfolio. Skilled in React, Next.js, Node.js, and cloud technologies.',
+    siteName: 'Ronit Soni — Developer Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ronit Soni Portfolio',
+    title: 'Ronit Soni | Full Stack MERN Developer',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+      'Explore an AI-powered developer portfolio with live projects, certifications, and an interactive chat assistant built with Gemini AI.',
     creator: '@RonitkumarSoni',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   icons: {
     icon: [
