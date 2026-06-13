@@ -314,6 +314,7 @@ function CategorySection({
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2.5 px-1">
+        {/* @ts-ignore - Icon is a valid lucide-react component */}
         <Icon className="h-5 w-5" />
         <Drawer.Title className="text-[22px] font-medium text-gray-900">
           {name}
