@@ -494,7 +494,7 @@ const Chat = () => {
                 <ChatLanding submitQuery={submitQuery} hasReachedLimit={hasReachedLimit} />
               </motion.div>
             ) : currentAIMessage ? (
-              <div className="pb-40 pt-2">
+              <div className="pb-24 pt-2">
                 <SimplifiedChatView
                   message={currentAIMessage}
                   isLoading={isLoading}
