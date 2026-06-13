@@ -229,10 +229,12 @@ const Chat = () => {
           body: JSON.stringify({ messages: updatedMessages }),
         });
 
-        if (!response.ok) throw new Error('Failed to fetch from Gemini');
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => null);
+          throw new Error(errorData?.error || 'Failed to fetch from Gemini');
+        }
 
-        const data = await response.json();
-        const answer = data.content;
+        const answer = await response.text();
 
         setMessages((prev) => [
           ...prev,
@@ -492,7 +494,7 @@ const Chat = () => {
                 <ChatLanding submitQuery={submitQuery} hasReachedLimit={hasReachedLimit} />
               </motion.div>
             ) : currentAIMessage ? (
-              <div className="pb-0 pt-2">
+              <div className="pb-40 pt-2">
                 <SimplifiedChatView
                   message={currentAIMessage}
                   isLoading={isLoading}
