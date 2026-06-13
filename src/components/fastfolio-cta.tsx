@@ -25,7 +25,7 @@ export function FastfolioCTA() {
     return () => clearInterval(interval);
   }, []);
 
-  const position = 'fixed top-8 left-6 z-51';
+  const position = '';
 
   return (
     <motion.button

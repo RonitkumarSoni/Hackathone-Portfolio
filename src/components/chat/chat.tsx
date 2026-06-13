@@ -221,7 +221,7 @@ const Chat = () => {
         return;
       }
 
-      // Fetch from Gemini API with streaming
+      // If no UI PILL match, fetch from powerful Gemini API!
       try {
         const response = await fetch('/api/chat', {
           method: 'POST',
@@ -229,40 +229,33 @@ const Chat = () => {
           body: JSON.stringify({ messages: updatedMessages }),
         });
 
-        if (!response.ok) {
-          let errMsg = 'Failed to fetch from Gemini';
-          try { const e = await response.json(); errMsg = e.error || errMsg; } catch (_) {}
-          throw new Error(errMsg);
-        }
+        if (!response.ok) throw new Error('Failed to fetch from Gemini');
 
-        // Create empty assistant message first
-        const assistantId = (Date.now() + 1).toString();
-        setMessages((prev) => [...prev, { id: assistantId, role: 'assistant', content: '' }]);
+        const data = await response.json();
+        const answer = data.content;
+
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: answer,
+          },
+        ]);
+
         setIsLoading(false);
         setLoadingSubmit(false);
         isSubmittingRef.current = false;
         setIsTalking(true);
-        if (videoRef.current) videoRef.current.play().catch(console.error);
 
-        // Stream text chunks into the message in real-time
-        const reader = response.body!.getReader();
-        const decoder = new TextDecoder();
-        let fullText = '';
-
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          fullText += decoder.decode(value, { stream: true });
-          setMessages((prev) =>
-            prev.map((m) => m.id === assistantId ? { ...m, content: fullText } : m)
-          );
+        if (videoRef.current) {
+          videoRef.current.play().catch(console.error);
         }
 
         setTimeout(() => {
           setIsTalking(false);
           if (videoRef.current) videoRef.current.pause();
-        }, 2000);
-
+        }, Math.min(Math.max(answer.length * 40, 2000), 6000));
       } catch (error: any) {
         console.error("Chat Error:", error);
         toast.error("Failed to fetch response from Gemini. Please check your API key.");

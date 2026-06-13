@@ -30,26 +30,26 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: 'Toukoum',
-      url: 'https://toukoum.fr',
+      name: 'Ronit Soni',
+      url: 'https://github.com/RonitkumarSoni',
     },
   ],
   creator: 'Ronit',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://toukoum.fr',
-    title: 'Toukoum Portfolio',
+    url: 'https://github.com/RonitkumarSoni',
+    title: 'Ronit Soni Portfolio',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    siteName: 'Toukoum Portfolio',
+      'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+    siteName: 'Ronit Soni Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Toukoum Portfolio',
+    title: 'Ronit Soni Portfolio',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    creator: '@toukoum',
+      'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+    creator: '@RonitkumarSoni',
   },
   icons: {
     icon: [
@@ -76,13 +76,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <link rel="icon" href="/favicon.svg" sizes="any" />
-        <Script
-          defer
-          data-website-id="68e067ba369b1b7f1f096056"
-          data-domain="toukoum.fr"
-          data-allow-localhost="true"
-          src="https://datafa.st/js/script.js"
-        ></Script>
+
       </head>
       <body
         className={cn(

@@ -30,7 +30,6 @@ An advanced AI-powered portfolio website built with Next.js 15, featuring intell
 ### DevTools
 - **Linting**: ESLint with Prettier
 - **Build**: Next.js Build System
-- **Deployment**: Vercel
 
 ## 📦 Installation
 
@@ -41,10 +40,6 @@ An advanced AI-powered portfolio website built with Next.js 15, featuring intell
 ### Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/RonitkumarSoni/Portfolio-AI---WebForge-Hackathone.git
-cd Portfolio-AI---WebForge-Hackathone/myPortfolio/portfolio
-
 # Install dependencies
 npm install
 # or
@@ -61,9 +56,6 @@ Add to `.env.local`:
 ```env
 # Google Gemini API
 NEXT_PUBLIC_GEMINI_API_KEY=your_api_key_here
-
-# Other configurations
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 ## 🚀 Development
@@ -87,27 +79,20 @@ The app will be available at `http://localhost:3000`
 ## 📂 Project Structure
 
 ```
-portfolio/
-├── src/
-│   ├── app/              # Next.js app directory
-│   │   └── api/         # API routes
-│   │   └── chat/        # Chat page
-│   │   └── projects/    # Projects page
-│   │   └── skills/      # Skills page
-│   │   └── certificates/# Certificates page
-│   ├── components/       # React components
-│   │   └── chat/        # Chat components
-│   │   └── magicui/     # Magic UI components
-│   │   └── ui/          # Base UI components
-│   ├── data/            # Static data
-│   ├── hooks/           # Custom React hooks
-│   └── lib/             # Utilities
-├── public/              # Static assets
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-├── next.config.ts
-└── README.md
+src/
+├── app/              # Next.js app directory
+│   ├── api/         # API routes
+│   ├── chat/        # Chat page
+│   ├── projects/    # Projects page
+│   ├── skills/      # Skills page
+│   └── certificates/# Certificates page
+├── components/       # React components
+│   ├── chat/        # Chat components
+│   ├── magicui/     # Magic UI components
+│   └── ui/          # Base UI components
+├── data/            # Static data
+├── hooks/           # Custom React hooks
+└── lib/             # Utilities
 ```
 
 ## 🌐 Pages
@@ -118,55 +103,18 @@ portfolio/
 - **Skills** - Skills and technologies
 - **Certificates** - Certifications and achievements
 
-## 🚀 Deployment
+## 🚀 Deployment on Vercel
 
-### Deploy on Vercel (Recommended)
+The project is configured for automatic deployment on Vercel.
 
 1. Push your code to GitHub
 2. Go to [Vercel Dashboard](https://vercel.com)
-3. Click "New Project"
-4. Import your GitHub repository
-5. Set environment variables:
+3. Import your GitHub repository
+4. Set environment variables in Vercel:
    - `NEXT_PUBLIC_GEMINI_API_KEY` - Your Gemini API key
-6. Click "Deploy"
+5. Click "Deploy"
 
-```bash
-# Or deploy via CLI
-npm i -g vercel
-vercel
-```
-
-### Manual Deployment
-
-```bash
-# Build the project
-npm run build
-
-# Start production server
-npm run start
-```
-
-## 📝 Configuration
-
-### Next.js Config
-- See `next.config.ts` for Next.js customizations
-- TypeScript config in `tsconfig.json`
-
-### Tailwind CSS
-- Configuration in `tailwind.config.ts`
-- PostCSS config in `postcss.config.mjs`
-
-### ESLint & Prettier
-- Rules in `.eslintrc.js`
-- Format config in `.prettierrc`
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Your portfolio will be live instantly!
 
 ## 📧 Contact
 
@@ -175,14 +123,6 @@ npm run start
 - 📧 Email: ronitkumarsoni.cg@gmail.com
 - 💼 LinkedIn: [Ronit Soni](https://www.linkedin.com/in/ronit-soni-63bb3a37a/)
 - 🐙 GitHub: [@RonitkumarSoni](https://github.com/RonitkumarSoni)
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🎓 Hackathon
-
-Built for **WebForge Hackathon 2025** - Portfolio AI Track
 
 ---
 

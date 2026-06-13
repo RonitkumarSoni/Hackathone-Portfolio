@@ -1,0 +1,40 @@
+{
+    "about": [
+        "I am Ronit Soni, a Full Stack Developer from India who specializes in the MERN stack.",
+        "I enjoy building modern web applications, AI-powered tools, and responsive user interfaces.",
+        "Currently, I am working as a Virtual Intern at Algonive, focusing on building production-ready applications and improving my system design skills."
+    ],
+    "skills": [
+        "Frontend: HTML, CSS, JavaScript, TypeScript, React, Tailwind",
+        "Backend: Node.js, Express.js",
+        "Database: MongoDB, Firebase",
+        "Tools: Git, GitHub, Docker, VS Code, Postman",
+        "Other: REST APIs, Responsive Design, UI/UX fundamentals"
+    ],
+    "experience": [
+        "Virtual Intern at Algonive, focusing on building production-ready applications and improving system design skills."
+    ],
+    "projects": [
+        "SpaceX Clone: A responsive clone of the SpaceX website built using HTML, CSS, and JavaScript with modern UI sections.",
+        "Slice Clone: A fintech landing page inspired by the Slice banking platform, focusing on UI design.",
+        "Dorje Teas Clone: A brand-style website clone with product sections and responsive navigation.",
+        "Proxgy Clone: A modern static landing page clone focusing on layout structure.",
+        "News App: A dynamic news application fetching real-time news using a public API.",
+        "Myntra Clone: A React-based e-commerce UI clone with product listing and routing."
+    ],
+    "contact": [
+        "You can reach out to me via email at ronitkumarsoni.cg@gmail.com",
+        "Or connect with me on LinkedIn: https://www.linkedin.com/in/ronit-soni-63bb3a37a/",
+        "Check out my GitHub at: https://github.com/RonitkumarSoni"
+    ],
+    "fun": [
+        "I actively participate in hackathons to push my creativity and problem-solving skills.",
+        "Some of my hackathon projects include rapid prototypes built with Next.js, Node.js, and various AI APIs.",
+        "Hackathons are a great way for me to collaborate with other developers and learn new technologies under tight deadlines."
+    ],
+    "certificates": [
+        "Full Stack Web Development (Algonive)",
+        "JavaScript Algorithms and Data Structures (FreeCodeCamp)",
+        "Professional Frontend Development (Meta/Coursera)"
+    ]
+}

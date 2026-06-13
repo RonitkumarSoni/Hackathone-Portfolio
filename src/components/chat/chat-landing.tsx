@@ -2,7 +2,6 @@
 
 import { motion, Variants } from 'framer-motion';
 import { ArrowUpRight, Award, Code, Mail, MessageSquare } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -71,8 +70,8 @@ const ChatLanding: React.FC<ChatLandingProps> = ({
       variants={containerVariants}
     >
       <motion.div variants={itemVariants} className="mb-8 text-center">
-        <h2 className="mb-2 text-2xl font-bold">Hey, I'm <span className="text-primary">Nova</span> ✦</h2>
-        <p className="text-muted-foreground">Ronit's personal AI — ask me anything about him, or just chat!</p>
+        <h2 className="mb-2 text-2xl font-bold">How can I help you today?</h2>
+        <p className="text-muted-foreground">Ask me anything about Ronit's experience, skills, or projects.</p>
       </motion.div>
 
       <div className="mb-8 grid w-full max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2">
