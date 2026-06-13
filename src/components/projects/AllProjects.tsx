@@ -18,8 +18,16 @@ interface Repo {
 const GITHUB_USERNAME = process.env.NEXT_PUBLIC_GITHUB_USERNAME || "RonitkumarSoni";
 const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN || "YOUR_GITHUB_TOKEN";
 
-// The precise list of clones the user wants in EXACT order.
+// The precise list of projects the user wants in EXACT order.
 const TARGET_CLONES = [
+  { id: "canva", searchPrefix: "canva", title: "Canva Clone", image: "/canva-new.png" },
+  { id: "rentease", searchPrefix: "rentease", title: "RentEase Plus", image: "/rentease-new.png" },
+  { id: "lms", searchPrefix: "lms", title: "LMS Portal", image: "/lms-new.png" },
+  { id: "homie", searchPrefix: "homie", title: "HOMIE Coffee", image: "/homie-new.png" },
+  { id: "ocean", searchPrefix: "ocean", title: "Ocean Depths", image: "/ocean-depths.png" },
+  { id: "medcompare", searchPrefix: "med-compare", title: "MedCompare", image: "/portfolio-new.png" },
+  { id: "genz", searchPrefix: "genz", title: "GenZ Agency", image: "/genz-agency.png" },
+  { id: "news", searchPrefix: "news-app", title: "News App", image: "/datai1.png" },
   { id: "dorje", searchPrefix: "dorje", title: "Dorje Teas Clone", image: "/dorje.png" },
   { id: "proxgy", searchPrefix: "proxgy", title: "Proxgy Clone", image: "/proxgy.png" },
   { id: "slice", searchPrefix: "slice", title: "Slice Clone", image: "/slice.png" },

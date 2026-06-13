@@ -7,9 +7,9 @@ const HackathonExperience = () => {
       name: 'Hackathone Portfolio (WebForge)',
       description: 'AI-powered interactive portfolio with a Gemini-based chatbot (Nova) that answers questions about skills, projects, and experience. Built with Next.js 15, Framer Motion, and streaming AI responses.',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Gemini AI', 'Framer Motion'],
-      image: '/finalPortfolioImage.jpg',
+      image: '/hackathon-portfolio.png',
       githubUrl: 'https://github.com/RonitkumarSoni/Hackathone-Portfolio',
-      liveUrl: 'https://hackathone-portfolio.vercel.app',
+      liveUrl: 'https://ronitsoni-dev.vercel.app/',
     },
     {
       name: 'AI Game Bot',
@@ -22,8 +22,9 @@ const HackathonExperience = () => {
       name: 'Vector Minds',
       description: 'A collaborative project exploring vector-based AI applications, semantic search, and intelligent data processing. Built to push boundaries in AI-powered knowledge retrieval.',
       techStack: ['AI/ML', 'Vector DB', 'Python', 'APIs'],
-      image: '/designer-coder.png',
+      image: '/vector-minds.png',
       githubUrl: 'https://github.com/RonitkumarSoni/vector-minds',
+      liveUrl: 'https://vector-minds.vercel.app',
     },
   ];
 
