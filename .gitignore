@@ -42,9 +42,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Certificates and screenshots (keep locally, don't push)
-*.pdf
-*.png
+# Root-level certificates/screenshots (keep locally, don't push)
+/*.pdf
+/*.png
+# But DO track public/ assets (needed for deployment)
+!public/
 
 # Build logs
 *.log
