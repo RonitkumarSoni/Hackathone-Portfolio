@@ -1,25 +1,29 @@
-import { Code, ExternalLink, Users, Layers, Cpu } from 'lucide-react';
+import { Code, ExternalLink, Users, Layers, Cpu, Github, Trophy } from 'lucide-react';
 import Image from 'next/image';
 
 const HackathonExperience = () => {
   const hackathons = [
     {
-      name: 'Hackathon Project 1',
-      description: 'Built during a university hackathon where our team created a rapid prototype to solve a real-world problem under time constraints.',
-      techStack: ['Next.js', 'Node.js', 'Tailwind', 'AI API'],
-      image: 'https://via.placeholder.com/600x400?text=Hackathon+Project+1', // Placeholder as requested
+      name: 'Hackathone Portfolio (WebForge)',
+      description: 'AI-powered interactive portfolio with a Gemini-based chatbot (Nova) that answers questions about skills, projects, and experience. Built with Next.js 15, Framer Motion, and streaming AI responses.',
+      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Gemini AI', 'Framer Motion'],
+      image: '/finalPortfolioImage.jpg',
+      githubUrl: 'https://github.com/RonitkumarSoni/Hackathone-Portfolio',
+      liveUrl: 'https://hackathone-portfolio.vercel.app',
     },
     {
-      name: 'Hackathon Project 2',
-      description: 'A collaborative hackathon project focused on building an innovative web solution with a clean UI and functional backend.',
-      techStack: ['React', 'Express', 'MongoDB'],
-      image: 'https://via.placeholder.com/600x400?text=Hackathon+Project+2',
+      name: 'AI Game Bot',
+      description: 'An intelligent game bot powered by AI that can play and strategize in real-time. Built during a hackathon to explore the intersection of AI and gaming with Python-based algorithms.',
+      techStack: ['Python', 'AI/ML', 'Game Logic', 'Algorithms'],
+      image: '/aibot-new.png',
+      githubUrl: 'https://github.com/RonitkumarSoni/Ai-Game-bot-hackathone',
     },
     {
-      name: 'Hackathon Project 3',
-      description: 'Developed a fast prototype exploring new technologies and creative problem-solving during a hackathon event.',
-      techStack: ['Next.js', 'TypeScript', 'Tailwind'],
-      image: 'https://via.placeholder.com/600x400?text=Hackathon+Project+3',
+      name: 'Vector Minds',
+      description: 'A collaborative project exploring vector-based AI applications, semantic search, and intelligent data processing. Built to push boundaries in AI-powered knowledge retrieval.',
+      techStack: ['AI/ML', 'Vector DB', 'Python', 'APIs'],
+      image: '/designer-coder.png',
+      githubUrl: 'https://github.com/RonitkumarSoni/vector-minds',
     },
   ];
 
@@ -27,12 +31,15 @@ const HackathonExperience = () => {
     <section className="mx-auto w-full max-w-6xl py-2">
       {/* Section Title */}
       <div className="mb-6 flex flex-col gap-2">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
-          Hackathon Experience
-        </h2>
+        <div className="flex items-center gap-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
+            Hackathon Experience
+          </h2>
+          <Trophy className="h-7 w-7 text-yellow-500" />
+        </div>
         <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed max-w-3xl">
-          This section highlights some hackathon projects and rapid prototypes I built while collaborating with other developers. 
-          Hackathons push creativity, teamwork, and fast problem-solving under tight deadlines.
+          Real hackathon projects where I built innovative solutions under tight deadlines, 
+          pushing creativity and technical skills to the limit.
         </p>
       </div>
 
@@ -64,7 +71,7 @@ const HackathonExperience = () => {
               </p>
 
               {/* Tech Stack */}
-              <div className="mt-auto flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 pt-2">
                 {project.techStack.map((tech, idx) => (
                   <span 
                     key={idx} 
@@ -73,6 +80,30 @@ const HackathonExperience = () => {
                     {tech}
                   </span>
                 ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="mt-auto flex gap-3 pt-3">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-xl text-sm font-medium hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors"
+                >
+                  <Github className="h-4 w-4" />
+                  View Code
+                </a>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-500 transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>

@@ -3,26 +3,131 @@ import { Award, ExternalLink } from 'lucide-react';
 const Certificate = () => {
   const certificatesData = [
     {
-      title: 'Full Stack Web Development',
+      title: 'AWS Certified Developer',
+      issuer: 'Amazon Web Services',
+      date: '2025',
+      link: '/certificates/AWS2_certificate.pdf',
+      description: 'Cloud computing certification covering AWS services, deployment, and scalable architecture.'
+    },
+    {
+      title: 'Microsoft Azure Fundamentals',
+      issuer: 'Microsoft',
+      date: '2025',
+      link: '/certificates/Microsoft_certificate.pdf',
+      description: 'Foundational cloud concepts, Azure services, security, privacy, and pricing models.'
+    },
+    {
+      title: 'Generative AI Studio',
+      issuer: 'Google Cloud',
+      date: '2025',
+      link: '/certificates/genrative ai studio.pdf',
+      description: 'Hands-on generative AI tools, prompt engineering, and AI model integration.'
+    },
+    {
+      title: 'GitHub Copilot Mastery',
+      issuer: 'GitHub',
+      date: '2025',
+      link: '/certificates/github Copilot certificate.pdf',
+      description: 'AI-powered coding assistance, pair programming with Copilot, and productivity optimization.'
+    },
+    {
+      title: 'Frontend Development Specialization',
       issuer: 'Algonive',
       date: '2025',
-      link: '#',
-      description: 'Comprehensive certification covering MERN stack development, system design, and production-ready applications.'
+      link: '/certificates/Fronted_certificate.pdf',
+      description: 'Advanced frontend development covering React, responsive design, and modern UI/UX practices.'
     },
     {
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'FreeCodeCamp',
-      date: '2024',
-      link: '#',
-      description: 'Certification focused on fundamental programming concepts, algorithms, and data structures.'
+      title: 'WebForge Hackathon Achievement',
+      issuer: 'WebForge',
+      date: '2025',
+      link: '/certificates/WebFrog_certificate.pdf',
+      description: 'Recognition for building an AI-powered portfolio during the WebForge Hackathon.'
     },
     {
-      title: 'Professional Frontend Development',
-      issuer: 'Meta (Coursera)',
+      title: 'React (Basic)',
+      issuer: 'HackerRank',
       date: '2024',
-      link: '#',
-      description: 'Advanced course on React, UI/UX principles, and responsive design.'
-    }
+      link: '/certificates/react_basic certificate.pdf',
+      description: 'Certified in React fundamentals, component architecture, hooks, and state management.'
+    },
+    {
+      title: 'Node.js (Basic)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/nodejs_basic certificate.pdf',
+      description: 'Server-side JavaScript, Express.js, REST APIs, and asynchronous programming.'
+    },
+    {
+      title: 'Node.js (Intermediate)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/nodejs_intermediate certificate.pdf',
+      description: 'Advanced Node.js patterns, middleware, authentication, and database integration.'
+    },
+    {
+      title: 'JavaScript (Basic)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/javascript_basic certificate.pdf',
+      description: 'Core JavaScript concepts, ES6+, closures, promises, and DOM manipulation.'
+    },
+    {
+      title: 'Python (Basic)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/python_basic certificate.pdf',
+      description: 'Python fundamentals, data types, control flow, functions, and OOP basics.'
+    },
+    {
+      title: 'CSS Specialist',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/css certificate.pdf',
+      description: 'Advanced CSS layouts, Flexbox, Grid, animations, and responsive design techniques.'
+    },
+    {
+      title: 'Problem Solving (Basic)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/problem_solving_basic certificate.pdf',
+      description: 'Algorithmic thinking, basic data structures, and problem-solving fundamentals.'
+    },
+    {
+      title: 'Problem Solving (Intermediate)',
+      issuer: 'HackerRank',
+      date: '2024',
+      link: '/certificates/problem_solving_intermediate certificate.pdf',
+      description: 'Advanced algorithms, optimization techniques, and complex data structure operations.'
+    },
+    {
+      title: 'CyberSecurity Fundamentals',
+      issuer: 'Certified Authority',
+      date: '2024',
+      link: '/certificates/CyberSecurity_certificate.pdf',
+      description: 'Network security, encryption, threat analysis, and security best practices.'
+    },
+    {
+      title: 'Data Analysis',
+      issuer: 'Certified Authority',
+      date: '2024',
+      link: '/certificates/Data Analyasis.pdf',
+      description: 'Data visualization, statistical analysis, and data-driven decision making.'
+    },
+    {
+      title: 'OpenPools Certification',
+      issuer: 'OpenPools',
+      date: '2024',
+      link: '/certificates/openPools_certificate.pdf',
+      description: 'Open-source contribution, collaborative development, and community engagement.'
+    },
+    {
+      title: 'Amity Noida Portfolio',
+      issuer: 'Amity University',
+      date: '2024',
+      link: '/certificates/Amity noida portfolio.pdf',
+      description: 'Academic portfolio showcasing technical projects and achievements.'
+    },
   ];
 
   return (
@@ -32,6 +137,9 @@ const Certificate = () => {
         <h2 className="text-4xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
           Certifications
         </h2>
+        <span className="text-sm font-medium text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+          {certificatesData.length} Total
+        </span>
       </div>
 
       {/* Certificates List */}
@@ -63,10 +171,15 @@ const Certificate = () => {
               {cert.description}
             </p>
 
-            <div className="mt-auto pt-4 flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 cursor-pointer">
+            <a 
+              href={cert.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-auto pt-4 flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 cursor-pointer"
+            >
               <span>View Certificate</span>
               <ExternalLink className="h-4 w-4" />
-            </div>
+            </a>
           </div>
         ))}
       </div>
