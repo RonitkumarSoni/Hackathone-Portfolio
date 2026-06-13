@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import Certificate from '@/components/certificate';
+
+export const metadata: Metadata = {
+    title: 'Certifications — 18 Professional Certificates',
+    description: 'View all 18 professional certifications of Ronit Soni including AWS, Microsoft Azure, Google AI Studio, HackerRank (React, Node.js, Python, Problem Solving), and more.',
+};
 
 export default function CertificatesPage() {
     return (

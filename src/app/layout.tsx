@@ -13,7 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ronit Soni | Full Stack MERN Developer & AI Enthusiast',
+  title: {
+    default: 'Ronit Soni | Full Stack MERN Developer & AI Enthusiast',
+    template: '%s | Ronit Soni',
+  },
   description:
     'Full Stack Developer specializing in MERN, Next.js, and AI-powered web applications. Explore 13+ live projects, 18 certifications, and an interactive AI chat assistant. Open to collaboration and opportunities.',
   keywords: [

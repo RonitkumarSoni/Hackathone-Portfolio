@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import Skills from '@/components/skills';
+
+export const metadata: Metadata = {
+    title: 'Skills — React, Node.js, AWS & More',
+    description: 'Technical skills and expertise of Ronit Soni — MERN stack, Next.js, TypeScript, AWS, Azure, Python, and 18 professional certifications from HackerRank, AWS, Microsoft, and Google.',
+};
 
 export default function SkillsPage() {
     return (

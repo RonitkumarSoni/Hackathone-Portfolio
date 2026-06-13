@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import AllProjects from '@/components/projects/AllProjects';
+
+export const metadata: Metadata = {
+    title: 'Projects — 13+ Live Web Applications',
+    description: 'Explore Ronit Soni\'s portfolio of 13+ live projects including Canva Clone, RentEase Plus, LMS Portal, MedCompare, and more. Each project features pixel-perfect UI and modern tech stacks.',
+};
 
 export default function ProjectsPage() {
     const githubToken = process.env.GITHUB_TOKEN || '';
